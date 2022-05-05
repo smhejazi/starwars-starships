@@ -62,7 +62,7 @@ const goBackEventListenter = () => {
 // check wheter next and prev buttons should be disabled considering
 // the number of ships in each page and the page index
 const checkNextPrevButton = () => {
-    if (savedShips.length < (pageIndex + 1) * SHIPS_IN_EACH_PAGE) {
+    if (savedShips.length <= (pageIndex + 1) * SHIPS_IN_EACH_PAGE) {
         document.getElementById("next-button").disabled = true;
     }
     else {
